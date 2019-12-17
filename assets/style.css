@@ -1,0 +1,19 @@
+#password-gen {
+    text-align: center;
+}
+
+#mainBox {
+    border: solid;
+}
+
+hr {
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+#exampleFormControlTextarea1 {
+    border: dotted;
+    margin-top: 0;
+}
