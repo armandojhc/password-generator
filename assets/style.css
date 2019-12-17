@@ -1,9 +1,22 @@
+#main-conatiner {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+.row {
+    font-family: 'Ropa Sans', sans-serif;
+}
 #password-gen {
     text-align: center;
 }
 
 #mainBox {
-    border: solid;
+    border: solid grey;
+    border-radius: 10px;
 }
 
 hr {
@@ -16,4 +29,82 @@ hr {
 #exampleFormControlTextarea1 {
     border: dotted;
     margin-top: 0;
+}
+
+.btn-primary {
+    font-size: 40px;
+    color: white;
+    border-color: rgba(151, 18, 18, 0.815);
+    background-color: rgba(192, 16, 16, 0.815);
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-bottom: 30px;
+}
+
+#clipboard-b {
+    font-size: 40px;
+    color: white;
+    border-color: grey;
+    background-color: grey;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+/* Media Queries to improve responsiveness  */
+
+@media (max-width: 800px) {
+    h2 {
+        text-align: center;
+        font-size: 20px;
+    }
+    h3 {
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+    .btn-primary {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 15px;
+    }
+    #clipboard-b {
+        position: relative;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 25px;
+    }
+
+  
+}
+
+ @media (max-width: 500px) { 
+    .navbar {
+        padding:0;
+        display: flex;
+    }
+    .nav-link {
+        font-size: 20px;
+    }
+    #navbarbrand {
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        left: 50px; 
+    }
+    #profilepic{
+        position: relative;
+        left: 40px; 
+    }
+    #aboutParagraph {
+        text-align: center;
+    }
+    #portfolioHeader {
+        text-align: center;
+        margin-left: 40px;
+    }
+    
 }
