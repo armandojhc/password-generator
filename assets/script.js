@@ -49,5 +49,6 @@ function generatePasswordBt() {
     newPassword = newPassword + newChar;
     }
 
+    document.getElementById("exampleFormControlTextarea1").innerHTML = newPassword;
     
 }
