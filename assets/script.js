@@ -7,43 +7,47 @@ function generatePasswordBt() {
       alert("Password length needs to be between 8-128 length!");
       return;
     }
-  
-  	var useSpecial = false;
+
+    var useSpecial = false;
   	var useNumeric = false;
   	var useUpper = false;
   	var useLower = false;
 	var characterType = prompt("Select whether you would like Special, Numeric, Uppercase, and Lowercase characters (type S, N, U or L)");
-  	
-  	var charChoices = "";
-  	if (characterType.indexOf('S') >= 0) useSpecial = true;
-  	if (characterType.indexOf('N') >= 0) useNumeric = true;
-  	if (characterType.indexOf('U') >= 0) {
-      useUpper = true;
-      charChoices += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    if (characterType.indexOf('S') >= 0) {
+        useSpecial = true;
+        charChoices += "!@#$%^&*()_+;:{}[]|',./?<>";
     }
-  	if (characterType.indexOf('L') >= 0) {
-      useLower = true;
-      charChoices += "abcdefghijklmnopqrstuvwxyz";
+
+    if (characterType.indexOf('N') >= 0) {
+        useLower = true;
+        charChoices += "1,2,3,4,5,6,7,8,9";
     }
-  
-  	if (!(useSpecial || useNumeric || useUpper || useLower)) {
-      alert ("Please choose at least one character type (S, N, U or L).");
-      return;
+
+    if (characterType.indexOf('U') >= 0) {
+        useUpper = true;
+        charChoices += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
-  
-  	var newPassword = "";
-  	var newChar;
+
+    if (characterType.indexOf('L') >= 0) {
+        useLower = true;
+        charChoices += "abcdefghijklmnopqrstuvwxyz";
+    }
+
+    if (!(useSpecial || useNumeric || useUpper || useLower)) {
+        alert ("Please choose at least one character type (S, N, U or L).");
+        return;
+    }
+
+    var newPassword = "";
+    var newChar;
   
 	for (var i=0; i<pwLength; i++) {
       
-     charChoices =  // Select a character from among the selected choices
-       newChar = //character randomly picked from charChoices
-       newPassword = newPassword + newChar;
-      // Add that character to newPassword
-      
+    var charChoices = "ABCDEFGHIJKLMNOPQRSTUVWXYZbcdefghijklmnopqrstuvwxyz!@#$%^&*()_+;:{}[]|',./?<>1,2,3,4,5,6,7,8,9";
+    newChar = charChoices[Math.floor(Math.random() * charChoices.length)];
+    newPassword = newPassword + newChar;
     }
 
-  	// Update the innerHTML of your html file to show password. Use the element id to do this
-  	document.getElementById("NN").innerHTML = newPassword;
-  	
+    
 }
