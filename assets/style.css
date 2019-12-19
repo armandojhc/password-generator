@@ -77,34 +77,5 @@ hr {
         font-size: 30px;
         margin-left: 25px;
     }
-
   
-}
-
- @media (max-width: 500px) { 
-    .navbar {
-        padding:0;
-        display: flex;
-    }
-    .nav-link {
-        font-size: 20px;
-    }
-    #navbarbrand {
-        text-align: center;
-        font-size: 20px;
-        position: relative;
-        left: 50px; 
-    }
-    #profilepic{
-        position: relative;
-        left: 40px; 
-    }
-    #aboutParagraph {
-        text-align: center;
-    }
-    #portfolioHeader {
-        text-align: center;
-        margin-left: 40px;
-    }
-    
 }
