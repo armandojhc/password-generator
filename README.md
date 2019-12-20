@@ -33,4 +33,12 @@ Step 8 - The newly created password will appear in the textbox that appears in t
 
 
 
+Screenshots have been added to the repository. 
+The live page link is:
+
+
+
+
+
+
 
