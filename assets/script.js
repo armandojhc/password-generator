@@ -1,22 +1,25 @@
 function generatePasswordBt() {
   
-	var pwLength = prompt("Password length (8-128)?","16");
-	//alert ("Password length is " + pwLength);
+	var pwLength = prompt("Password length (8-128)?");
 	
   	if (pwLength < 8 || pwLength > 128) {
       alert("Password length needs to be between 8-128 length!");
       return;
     }
 
+    var charChoices = "";
     var useSpecial = false;
   	var useNumeric = false;
   	var useUpper = false;
   	var useLower = false;
 	var characterType = prompt("Select whether you would like Special, Numeric, Uppercase, and Lowercase characters (type S, N, U or L)");
 
+
     if (characterType.indexOf('S') >= 0) {
+        console.log("in special characters block");
         useSpecial = true;
         charChoices += "!@#$%^&*()_+;:{}[]|',./?<>";
+        console.log(charChoices);
     }
 
     if (characterType.indexOf('N') >= 0) {
@@ -39,12 +42,13 @@ function generatePasswordBt() {
         return;
     }
 
-    var newPassword = "";
+    
+    var newPassword="";
     var newChar;
   
 	for (var i=0; i<pwLength; i++) {
       
-    var charChoices = "ABCDEFGHIJKLMNOPQRSTUVWXYZbcdefghijklmnopqrstuvwxyz!@#$%^&*()_+;:{}[]|',./?<>1,2,3,4,5,6,7,8,9";
+   
     newChar = charChoices[Math.floor(Math.random() * charChoices.length)];
     newPassword = newPassword + newChar;
     }
